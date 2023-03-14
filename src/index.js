@@ -1,15 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+//import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import  RoomProvider from './context';
+import { RoomContext } from './context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Router>
+      <App />
+    </Router>
 );
+
+
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <RoomContext.Provider>
+//     <Router>
+//       <App />
+//     </Router>
+//   </RoomContext.Provider>
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
